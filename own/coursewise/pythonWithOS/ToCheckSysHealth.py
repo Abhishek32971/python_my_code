@@ -1,4 +1,4 @@
-import shutil
+'''import shutil
 import psutil
 
 def check_disk_usage(disk):
@@ -13,4 +13,16 @@ def check_cpu_usage():
 if not check_disk_usage("/") or not check_cpu_usage():
     print("ERRor")
 else :
-    print('everythn is a ok')
+    print('everythn is a ok')'''
+
+import socket
+import requests
+
+def check_localhost():
+    localhost=socket.gethostbyname("localhost")
+    return localhost== "127.0.0.1"
+def check_connectivity():
+    request=requests.get("http://www.google.com")
+    return request.status_code==200
+print(check_connectivity())
+print(check_localhost())
