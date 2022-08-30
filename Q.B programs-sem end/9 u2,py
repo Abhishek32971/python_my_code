@@ -1,3 +1,0 @@
-str2="yoy"
-str1=reversed(str2)
-print(list(str1)==list(str2))
